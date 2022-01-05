@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'microblog.apps.MicroblogConfig',
+    'markdownify.apps.MarkdownifyConfig',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,45 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MARKDOWNIFY = {
+    "default": {
+        "MARKDOWN_EXTENSIONS": [
+            'markdown.extensions.fenced_code',
+            'markdown.extensions.extra',
+        ],
+        "WHITELIST_TAGS": [
+            'a',
+            'abbr',
+            'acronym',
+            'b',
+            'blockquote',
+            'em',
+            'i',
+            'li',
+            'ol',
+            'p',
+            'strong',
+            'ul',
+            'h1',
+            'h2',
+            'h3',
+            'h4',
+            'h5',
+            'pre',
+            'code',
+            'br',
+            'img',
+        ],
+        "WHITELIST_ATTRS": [
+            'href',
+            'src',
+            'alt',
+        ],
+        "WHITELIST_STYLES": [
+            'color',
+            'font-weight',
+        ],
+        "STRIP": False
+    }
+}
