@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure--v$t0z0=6((8=8=q)y#801b+esb$h@+#v9ds-ou=bi+fxu4^*9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['.localhost', '127.0.0.1', '[::1]', '192.168.178.24', 'edittrich.de']
 
 # Application definition
 
@@ -39,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'microblog.apps.MicroblogConfig',
     'markdownify.apps.MarkdownifyConfig',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [

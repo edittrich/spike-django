@@ -1,3 +1,5 @@
 /.idea
 /.python-version
+/cert.pem
+/key.pem
 db.sqlite3
